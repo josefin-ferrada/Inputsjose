@@ -1,21 +1,13 @@
 <h1 align="center">My React Component Library 👋</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
-  <a href="https://github.com/thmsgbrt/my-react-component-library#readme" target="_blank">
-    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
-  </a>
-  <a href="https://github.com/thmsgbrt/my-react-component-library/graphs/commit-activity" target="_blank">
-    <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
-  </a>
-  <a href="https://github.com/thmsgbrt/my-react-component-library/blob/master/LICENSE" target="_blank">
-    <img alt="License: MIT" src="https://img.shields.io/github/license/thmsgbrt/my-react-component-library" />
-  </a>
-  <a href="https://twitter.com/guibz16" target="_blank">
-    <img alt="Twitter: guibz16" src="https://img.shields.io/twitter/follow/guibz16.svg?style=social" />
-  </a>
+  [![npm](https://img.shields.io/npm/v/@eclass/ui-eclass.svg)](https://www.npmjs.com/package/@eclass/ui-eclass)
+  [![dependencies](https://img.shields.io/david/eclass/ui-eclass.svg)](https://david-dm.org/eclass/ui-eclass)
+  [![devDependency Status](https://img.shields.io/david/dev/eclass/ui-eclass.svg)](https://david-dm.org/eclass/ui-eclass#info=devDependencies)
+  [![style: styled-components](https://img.shields.io/badge/style-%F0%9F%92%85%20styled--components-orange.svg?colorB=daa357&colorA=db748e)](https://github.com/styled-components/styled-components) 
+  [![Storybook](https://cdn.jsdelivr.net/gh/storybookjs/brand@master/badge/badge-storybook.svg)](https://github.com/storybookjs/storybook)
 </p>
 
-> This is the final project of my "Build a React Component Library and Publish to the GitHub Package Registry" article on medium. [Check it out!](https://medium.com/better-programming/build-your-very-own-react-component-library-and-publish-it-to-github-package-registry-192a688a51fd)
+> Componentes plataforma v8 de @eclass [eclass.cl](https://www.eclass.com/cl/)
 
 ### 🏠 [Homepage](https://github.com/thmsgbrt/my-react-component-library)
 
