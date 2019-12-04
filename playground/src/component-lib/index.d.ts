@@ -1,2 +1,3 @@
 import { Avatar } from './avatar';
-export { Avatar };
+import { InputSelect } from './inputSelect';
+export { Avatar, InputSelect };

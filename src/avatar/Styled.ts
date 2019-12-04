@@ -1,6 +1,3 @@
-
-/* eslint-disable eslint-comments/disable-enable-pair */
-/* eslint-disable @typescript-eslint/explicit-function-return-type */
 import styled from 'styled-components'
 import { IWrapper } from './types'
 
