@@ -1,29 +1,33 @@
 /// <reference types="react" />
 import PropTypes from "prop-types";
-import { PropSelect } from "./types";
-export declare const InputSelect: {
-    (props: PropSelect): JSX.Element;
+import { InputProps } from "./types";
+export declare const InputText: {
+    (props: InputProps): JSX.Element;
     propTypes: {
+        /**
+        Tipo de validación
+        */
+        type: PropTypes.Requireable<string>;
         /**
         Si está deshabilitado
         */
         disabled: PropTypes.Requireable<boolean>;
         /**
-        Array de datos a listar
+        Autofocus al input
         */
-        data: PropTypes.Requireable<any[]>;
+        autoFocus: PropTypes.Requireable<boolean>;
         /**
-        Placeholder de select
+        Placeholder del input
         */
         placeholder: PropTypes.Requireable<string>;
         /**
-        Etiqueta de select
+        Etiqueta sobre el input
         */
         label: PropTypes.Requireable<string>;
     };
     defaultProps: {
         disabled: boolean;
-        data: null;
+        autoFocus: boolean;
         placeholder: string;
         label: string;
     };

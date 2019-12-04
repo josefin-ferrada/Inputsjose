@@ -5,6 +5,7 @@ declare type IconProps = {
     onClick: any;
     viewBox: any;
     testid?: any;
+    fill: any;
 };
 /**
  * Este componente se encarga de dibujar todos los íconos svg pequeños de la app.

@@ -10,7 +10,6 @@ const Wrapper = styled.figure`
   overflow: hidden;
   /* @ts-ignore  */
   width: ${(prop: IWrapper) => `${prop.size}px`};
-   //@ts-ignore  */
   background-color: ${(props: IWrapper) => props.selectedColor};
   display: flex;
   align-items: center;
@@ -18,6 +17,7 @@ const Wrapper = styled.figure`
   span {
     color: white;
     text-transform: uppercase;
+    font-weight: 500 !important;
     font: bold ${(props: IWrapper) => `${props.fontSize}px`} / 30px Roboto;
   }
   img {

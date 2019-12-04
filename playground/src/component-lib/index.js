@@ -36,7 +36,7 @@ function __makeTemplateObject(cooked, raw) {
     return cooked;
 }
 
-var Wrapper = styled.figure(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  border-radius: 50%;\n  flex-shrink: 0;\n/* @ts-ignore  */\n  height: ", ";\n  margin: 0px 0px 0px 0px;\n  overflow: hidden;\n  /* @ts-ignore  */\n  width: ", ";\n   //@ts-ignore  */\n  background-color: ", ";\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  span {\n    color: white;\n    text-transform: uppercase;\n    font: bold ", " / 30px Roboto;\n  }\n  img {\n    height: auto;\n    max-width: 100%;\n  }\n  .test-img {\n    display: none;\n  }\n"], ["\n  border-radius: 50%;\n  flex-shrink: 0;\n/* @ts-ignore  */\n  height: ", ";\n  margin: 0px 0px 0px 0px;\n  overflow: hidden;\n  /* @ts-ignore  */\n  width: ", ";\n   //@ts-ignore  */\n  background-color: ", ";\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  span {\n    color: white;\n    text-transform: uppercase;\n    font: bold ", " / 30px Roboto;\n  }\n  img {\n    height: auto;\n    max-width: 100%;\n  }\n  .test-img {\n    display: none;\n  }\n"])), function (prop) { return prop.size + "px"; }, function (prop) { return prop.size + "px"; }, function (props) { return props.selectedColor; }, function (props) { return props.fontSize + "px"; });
+var Wrapper = styled.figure(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  border-radius: 50%;\n  flex-shrink: 0;\n/* @ts-ignore  */\n  height: ", ";\n  margin: 0px 0px 0px 0px;\n  overflow: hidden;\n  /* @ts-ignore  */\n  width: ", ";\n  background-color: ", ";\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  span {\n    color: white;\n    text-transform: uppercase;\n    font-weight: 500 !important;\n    font: bold ", " / 30px Roboto;\n  }\n  img {\n    height: auto;\n    max-width: 100%;\n  }\n  .test-img {\n    display: none;\n  }\n"], ["\n  border-radius: 50%;\n  flex-shrink: 0;\n/* @ts-ignore  */\n  height: ", ";\n  margin: 0px 0px 0px 0px;\n  overflow: hidden;\n  /* @ts-ignore  */\n  width: ", ";\n  background-color: ", ";\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  span {\n    color: white;\n    text-transform: uppercase;\n    font-weight: 500 !important;\n    font: bold ", " / 30px Roboto;\n  }\n  img {\n    height: auto;\n    max-width: 100%;\n  }\n  .test-img {\n    display: none;\n  }\n"])), function (prop) { return prop.size + "px"; }, function (prop) { return prop.size + "px"; }, function (props) { return props.selectedColor; }, function (props) { return props.fontSize + "px"; });
 var templateObject_1;
 
 /**
@@ -103,7 +103,7 @@ Avatar.defaultProps = {
  * @typedef {Object} Vars
  * @property {Object} setColors - Cambiar color
  */
-var UIVars = {
+var variables = {
     // Border
     borderRadius: '10px',
     /**
@@ -240,7 +240,7 @@ var hexToRgbA = function (hex, opacity) {
     }
 };
 
-var Wrapper$1 = styled.div(templateObject_1$1 || (templateObject_1$1 = __makeTemplateObject(["\n  height: 97px;\n  select {\n    width: 400px;\n    height: 44px;\n  }\n\n  .form-control:focus {\n    color: #495057;\n    background-color: #fff;\n    border: solid 2px ", ";\n    outline: 0;\n    box-shadow: none;\n  }\n\n  .form-control:disabled {\n    color: ", ";\n  }\n\n  select.form-control {\n    font-family: 'Roboto', sans-serif;\n    background-repeat: no-repeat;\n    background-position: 370px;\n    -moz-appearance: none;\n    -webkit-appearance: none;\n    appearance: none;\n    position: relative;\n    overflow: hidden;\n    color: ", ";\n    :before {\n      -webkit-transform: rotate(deg);\n      transform: rotate(90deg);\n    }\n  }\n  .valid_feedback {\n    color: ", ";\n    display: flex;\n    margin-top: 4px;\n    align-items: center;\n    font-size: 12px;\n  }\n\n  .invalid_feedback {\n    color: ", ";\n    display: flex;\n    margin-top: 4px;\n    align-items: center;\n    font-size: 12px;\n  }\n\n  .borderGreen {\n    border: solid 2px ", ";\n  }\n  .borderGreen:focus {\n    border: solid 2px ", ";\n  }\n  .borderRed {\n    border: solid 2px ", ";\n  }\n  .borderRed:focus {\n    border: solid 2px ", ";\n  }\n\n  ::placeholder {\n    color: ", ";\n  }\n\n  label {\n    font-size: 14px;\n    font-weight: bold;\n  }\n  .gray {\n    color: ", ";\n  }\n"], ["\n  height: 97px;\n  select {\n    width: 400px;\n    height: 44px;\n  }\n\n  .form-control:focus {\n    color: #495057;\n    background-color: #fff;\n    border: solid 2px ", ";\n    outline: 0;\n    box-shadow: none;\n  }\n\n  .form-control:disabled {\n    color: ", ";\n  }\n\n  select.form-control {\n    font-family: 'Roboto', sans-serif;\n    background-repeat: no-repeat;\n    background-position: 370px;\n    -moz-appearance: none;\n    -webkit-appearance: none;\n    appearance: none;\n    position: relative;\n    overflow: hidden;\n    color: ", ";\n    :before {\n      -webkit-transform: rotate(deg);\n      transform: rotate(90deg);\n    }\n  }\n  .valid_feedback {\n    color: ", ";\n    display: flex;\n    margin-top: 4px;\n    align-items: center;\n    font-size: 12px;\n  }\n\n  .invalid_feedback {\n    color: ", ";\n    display: flex;\n    margin-top: 4px;\n    align-items: center;\n    font-size: 12px;\n  }\n\n  .borderGreen {\n    border: solid 2px ", ";\n  }\n  .borderGreen:focus {\n    border: solid 2px ", ";\n  }\n  .borderRed {\n    border: solid 2px ", ";\n  }\n  .borderRed:focus {\n    border: solid 2px ", ";\n  }\n\n  ::placeholder {\n    color: ", ";\n  }\n\n  label {\n    font-size: 14px;\n    font-weight: bold;\n  }\n  .gray {\n    color: ", ";\n  }\n"])), UIVars.setColors.deepSkyBlue, UIVars.setColors.veryLightPink, UIVars.setColors.black, UIVars.setColors.jadeGreen, UIVars.setColors.red, UIVars.setColors.jadeGreen, UIVars.setColors.jadeGreen, UIVars.setColors.red, UIVars.setColors.red, UIVars.setColors.brownGreyTwo, UIVars.setColors.brownGreyTwo);
+var Wrapper$1 = styled.div(templateObject_1$1 || (templateObject_1$1 = __makeTemplateObject(["\n  height: 97px;\n  select {\n    width: -webkit-fill-available;\n    height: 50px;\n  }\n\n  .form-control:focus {\n    background-color: #fff;\n    border: solid 2px ", ";\n    outline: 0;\n    box-shadow: none;\n  }\n\n  .form-control:disabled {\n    color: ", ";\n  }\n\n  select.form-control {\n    background-image: url('https://svgshare.com/i/GaH.svg');\n    font-family: 'Roboto', sans-serif;\n    background-repeat: no-repeat;\n    background-position: right;\n    background-origin: content-box;\n    -moz-appearance: none;\n    -webkit-appearance: none;\n    appearance: none;\n    position: relative;\n    overflow: hidden;\n    :before {\n      -webkit-transform: rotate(deg);\n      transform: rotate(90deg);\n    }\n  }\n  .valid_feedback {\n    color: ", ";\n    display: flex;\n    margin-top: 4px;\n    align-items: center;\n    font-size: 12px;\n  }\n\n  .invalid_feedback {\n    color: ", ";\n    display: flex;\n    margin-top: 4px;\n    align-items: center;\n    font-size: 12px;\n  }\n\n  .borderGreen {\n    border: solid 2px ", ";\n  }\n  .borderGreen:focus {\n    border: solid 2px ", ";\n  }\n  .borderRed {\n    border: solid 2px ", ";\n  }\n  .borderRed:focus {\n    border: solid 2px ", ";\n  }\n\n  ::placeholder {\n    color: ", ";\n  }\n\n  label {\n    font-size: 14px;\n    font-weight: bold;\n  }\n  .gray {\n    color: ", ";\n  }\n"], ["\n  height: 97px;\n  select {\n    width: -webkit-fill-available;\n    height: 50px;\n  }\n\n  .form-control:focus {\n    background-color: #fff;\n    border: solid 2px ", ";\n    outline: 0;\n    box-shadow: none;\n  }\n\n  .form-control:disabled {\n    color: ", ";\n  }\n\n  select.form-control {\n    background-image: url('https://svgshare.com/i/GaH.svg');\n    font-family: 'Roboto', sans-serif;\n    background-repeat: no-repeat;\n    background-position: right;\n    background-origin: content-box;\n    -moz-appearance: none;\n    -webkit-appearance: none;\n    appearance: none;\n    position: relative;\n    overflow: hidden;\n    :before {\n      -webkit-transform: rotate(deg);\n      transform: rotate(90deg);\n    }\n  }\n  .valid_feedback {\n    color: ", ";\n    display: flex;\n    margin-top: 4px;\n    align-items: center;\n    font-size: 12px;\n  }\n\n  .invalid_feedback {\n    color: ", ";\n    display: flex;\n    margin-top: 4px;\n    align-items: center;\n    font-size: 12px;\n  }\n\n  .borderGreen {\n    border: solid 2px ", ";\n  }\n  .borderGreen:focus {\n    border: solid 2px ", ";\n  }\n  .borderRed {\n    border: solid 2px ", ";\n  }\n  .borderRed:focus {\n    border: solid 2px ", ";\n  }\n\n  ::placeholder {\n    color: ", ";\n  }\n\n  label {\n    font-size: 14px;\n    font-weight: bold;\n  }\n  .gray {\n    color: ", ";\n  }\n"])), variables.setColors.deepSkyBlue, variables.setColors.veryLightPink, variables.setColors.jadeGreen, variables.setColors.red, variables.setColors.jadeGreen, variables.setColors.jadeGreen, variables.setColors.red, variables.setColors.red, variables.setColors.brownGreyTwo, variables.setColors.brownGreyTwo);
 var templateObject_1$1;
 
 var getViewBox = function (viewBox, width, height) {
@@ -351,11 +351,11 @@ var getPath = function (name, props) {
                 createElement("path", { d: "M0 14h16v2H0zM11.7 3.3c.4-.4.4-1 0-1.4L10.1.3c-.4-.4-1-.4-1.4 0L0 9v3h3l8.7-8.7z" })));
         case 'circularCheck':
             return (createElement("g", __assign({}, props, { fillRule: "nonzero" }),
-                createElement("rect", { width: "17", height: "17", fill: UIVars.setColors.checkGreen, rx: "8.5" }),
+                createElement("rect", { width: "17", height: "17", fill: "#28A745", rx: "8.5" }),
                 createElement("path", { fill: "#FFF", fillRule: "nonzero", d: "M7.125 10.531l5.385-5.385 1.097 1.097-6.364 6.364L3 8.364l.98-.98z" })));
         case 'circularError':
             return (createElement("g", __assign({}, props, { fillRule: "nonzero" }),
-                createElement("rect", { width: "17", height: "17", fill: UIVars.setColors.checkError, rx: "8.5" }),
+                createElement("rect", { width: "17", height: "17", fill: "#C00", rx: "8.5" }),
                 createElement("g", { stroke: "#FFF", strokeLinecap: "square", strokeWidth: "1.5" },
                     createElement("path", { d: "M5.474 5.555l6.24 5.941M5.34 11.544l6.035-6.153" }))));
         case 'academic_historial':
@@ -392,14 +392,13 @@ los de Ranking.
  * @example
  */
 var Icon = function (props) {
-    var height = props.height, onClick = props.onClick, viewBox = props.viewBox, testid = props.testid;
+    var height = props.height, onClick = props.onClick, viewBox = props.viewBox, testid = props.testid, fill = props.fill;
     var name = '';
     var style = {};
-    var fill = 'none';
     var stroke = '';
     var className = '';
     var width = 16;
-    return (createElement(StyledSVG, { "data-testid": testid, onClick: onClick, width: width, style: style, height: height, viewBox: getViewBox(viewBox, width, height), className: className, xmlns: "http://www.w3.org/2000/svg", xmlnsXlink: "http://www.w3.org/1999/xlink" }, getPath(name, { fill: fill, stroke: stroke })));
+    return (createElement(StyledSVG, { "data-testid": testid, onClick: onClick, width: width, style: style, height: height, viewBox: getViewBox(viewBox, width, height), className: className, fill: fill, xmlns: "http://www.w3.org/2000/svg", xmlnsXlink: "http://www.w3.org/1999/xlink" }, getPath(name, { fill: fill, stroke: stroke })));
 };
 // @Export Styled Component
 var StyledSVG = styled.svg(templateObject_1$2 || (templateObject_1$2 = __makeTemplateObject(["\n  flex-shrink: 0;\n  margin-right: ", ";\n  height: ", ";\n  width: ", ";\n"], ["\n  flex-shrink: 0;\n  margin-right: ",
@@ -438,7 +437,7 @@ var InputSelect = function (props) {
     var timer;
     var interval = 1000;
     var validateSelect = function (value) {
-        if (value === 'Selecciona') {
+        if (value === "Selecciona") {
             clearTimeout(timer);
             timer = setTimeout(function () {
                 setIcon(React__default.createElement("div", { className: "invalid_feedback" },
@@ -459,7 +458,7 @@ var InputSelect = function (props) {
         }
     };
     return (React__default.createElement(Wrapper$1, null,
-        React__default.createElement(Label, { for: "exampleSelect", className: classNames(disabled ? 'gray' : '') }, label),
+        React__default.createElement(Label, { for: "exampleSelect", className: classNames(disabled ? "gray" : "") }, label),
         React__default.createElement(Input, { onChange: function (e) {
                 validateSelect(e.target.value);
             }, className: classNames({
@@ -468,10 +467,12 @@ var InputSelect = function (props) {
             }), type: "select", name: "select", id: "exampleSelect", disabled: disabled || false },
             React__default.createElement("option", { value: "Selecciona" }, placeholder),
             data
-                ? data.map(function (region, key) {
-                    return (React__default.createElement("option", { value: region.region, key: key }, region.region));
+                ? data.map(function (item, key) {
+                    return (React__default.createElement("option", { value: item.item, key: key }, item.item));
                 })
-                : null),
+                : null,
+            React__default.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", width: "16", height: "9", viewBox: "0 0 16 9" },
+                React__default.createElement("path", { fill: "#60798E", "fill-rule": "evenodd", d: "M8.106 8.235a.934.934 0 0 1-.611-.227L.212 1.75 1.434.32l6.672 5.735L14.778.32 16 1.75 8.717 8.008a.934.934 0 0 1-.611.227z" }))),
         icon));
 };
 // @Proptypes
@@ -496,8 +497,117 @@ InputSelect.propTypes = {
 InputSelect.defaultProps = {
     disabled: false,
     data: null,
-    placeholder: 'Placeholder',
-    label: 'Etiqueta'
+    placeholder: "Placeholder",
+    label: "Etiqueta"
 };
 
-export { Avatar, InputSelect };
+var Wrapper$2 = styled.div(templateObject_1$3 || (templateObject_1$3 = __makeTemplateObject(["\n  font-family: 'Roboto', sans-serif;\n  height: 97px;\n  label {\n    font-size: 14px;\n    font-weight: bold;\n  }\n  input {\n    height: 50px;\n    width: -webkit-fill-available;\n    &[disabled] {\n      cursor: no-drop;\n    }\n    ::placeholder {\n      font-style: normal;\n      color: ", "\n    }\n  }\n  .form-control:focus {\n    color: #495057;\n    background-color: #fff;\n    border: solid 2px ", ";\n    outline: 0;\n    color: ", ";\n    box-shadow: none;\n  }\n  .valid_feedback {\n    color: ", ";\n    display: flex;\n    margin-top: 4px;\n    align-items: center;\n    font-size: 12px;\n    svg{\n      margin-right: 10px;\n    }\n  }\n  .invalid_feedback {\n    color: ", ";\n    display: flex;\n    margin-top: 4px;\n    align-items: center;\n    font-size: 12px;\n    svg{\n      margin-right: 10px;\n    }\n  }\n  .borderGreen {\n    border: solid 2px ", ";\n  }\n  .borderGreen:focus {\n    border: solid 2px ", ";\n  }\n  .borderRed {\n    border: solid 2px ", ";\n  }\n  .borderRed:focus {\n    border: solid 2px ", ";\n  }\n  .gray {\n    color: ", ";\n  }\n"], ["\n  font-family: 'Roboto', sans-serif;\n  height: 97px;\n  label {\n    font-size: 14px;\n    font-weight: bold;\n  }\n  input {\n    height: 50px;\n    width: -webkit-fill-available;\n    &[disabled] {\n      cursor: no-drop;\n    }\n    ::placeholder {\n      font-style: normal;\n      color: ", "\n    }\n  }\n  .form-control:focus {\n    color: #495057;\n    background-color: #fff;\n    border: solid 2px ", ";\n    outline: 0;\n    color: ", ";\n    box-shadow: none;\n  }\n  .valid_feedback {\n    color: ", ";\n    display: flex;\n    margin-top: 4px;\n    align-items: center;\n    font-size: 12px;\n    svg{\n      margin-right: 10px;\n    }\n  }\n  .invalid_feedback {\n    color: ", ";\n    display: flex;\n    margin-top: 4px;\n    align-items: center;\n    font-size: 12px;\n    svg{\n      margin-right: 10px;\n    }\n  }\n  .borderGreen {\n    border: solid 2px ", ";\n  }\n  .borderGreen:focus {\n    border: solid 2px ", ";\n  }\n  .borderRed {\n    border: solid 2px ", ";\n  }\n  .borderRed:focus {\n    border: solid 2px ", ";\n  }\n  .gray {\n    color: ", ";\n  }\n"])), variables.setColors.brownGreyTwo, variables.setColors.deepSkyBlue, variables.setColors.black, variables.setColors.jadeGreen, variables.setColors.red, variables.setColors.jadeGreen, variables.setColors.jadeGreen, variables.setColors.red, variables.setColors.red, variables.setColors.brownGreyTwo);
+var templateObject_1$3;
+
+var InputText = function (props) {
+    var disabled = props.disabled, autoFocus = props.autoFocus, type = props.type, placeholder = props.placeholder, label = props.label;
+    var _a = useState(""), valueInput = _a[0], setValueInput = _a[1];
+    var _b = useState(), icon = _b[0], setIcon = _b[1];
+    var _c = useState(false), borderValid = _c[0], setBorderValid = _c[1];
+    var _d = useState(false), borderInvalid = _d[0], setBorderInvalid = _d[1];
+    var timer;
+    var interval = 1000;
+    var ValidIcon = (React__default.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", width: "17", height: "17", version: "1.1", viewBox: "0 0 17 17" },
+        React__default.createElement("g", { fillRule: "nonzero" },
+            React__default.createElement("rect", { width: "17", height: "17", fill: "#28A745", rx: "8.5" }),
+            React__default.createElement("path", { fill: "#FFF", fillRule: "nonzero", d: "M7.125 10.531l5.385-5.385 1.097 1.097-6.364 6.364L3 8.364l.98-.98z" }))));
+    var InvalidIcon = (React__default.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", width: "17", height: "17", version: "1.1", viewBox: "0 0 17 17" },
+        React__default.createElement("g", __assign({}, props, { fillRule: "nonzero" }),
+            React__default.createElement("rect", { width: "17", height: "17", fill: "#C00", rx: "8.5" }),
+            React__default.createElement("g", { stroke: "#FFF", strokeLinecap: "square", strokeWidth: "1.5" },
+                React__default.createElement("path", { d: "M5.474 5.555l6.24 5.941M5.34 11.544l6.035-6.153" })))));
+    var validateInput = function (typeValidation, value) {
+        switch (typeValidation) {
+            case "phone":
+                return validation("^([+])?([0-9]{1,20})$", value, "Debe ingresar sólo números");
+            case "email":
+                return validation("^.+@[^.].*.[a-z]{2,}$", value, "Debes llenar este campo con email válido");
+            case "alphabetic":
+                return validation("^[a-zA-ZñÑáéíóúÁÉÍÓÚ\\s]+$", value, "Debe contener sólo valores alfabéticos");
+            default:
+                return null;
+        }
+    };
+    var validation = function (regex, value, message) {
+        clearTimeout(timer);
+        if (value.match(regex)) {
+            timer = setTimeout(function () {
+                setIcon(React__default.createElement("div", { className: "valid_feedback" },
+                    ValidIcon,
+                    "Correcto"));
+                setBorderValid(true);
+                setBorderInvalid(false);
+            }, interval);
+        }
+        else if (value === "") {
+            timer = setTimeout(function () {
+                setIcon(React__default.createElement("div", { className: "invalid_feedback" },
+                    InvalidIcon,
+                    "Este campo es obligatorio"));
+                setBorderValid(false);
+                setBorderInvalid(true);
+            }, interval);
+        }
+        else {
+            timer = setTimeout(function () {
+                setIcon(React__default.createElement("div", { className: "invalid_feedback" },
+                    InvalidIcon,
+                    message));
+                setBorderValid(false);
+                setBorderInvalid(true);
+            }, interval);
+        }
+    };
+    return (React__default.createElement(Wrapper$2, null,
+        React__default.createElement(Label, { for: "Input Text", className: classNames(disabled ? "gray" : "") }, label),
+        React__default.createElement(Input, { "aria-label": "Campo de texto", value: valueInput, onChange: function (e) {
+                setValueInput(e.target.value);
+            }, onKeyUp: function (e) {
+                clearTimeout(timer);
+                validateInput(type, e.target.value);
+            }, onKeyDown: function () {
+                clearTimeout(timer);
+            }, onBlur: function () {
+                clearTimeout(timer);
+            }, autoFocus: autoFocus || false, placeholder: placeholder, className: classNames({
+                borderRed: borderInvalid,
+                borderGreen: borderValid
+            }), disabled: disabled || false }),
+        icon));
+};
+// @Proptypes
+InputText.propTypes = {
+    /**
+    Tipo de validación
+    */
+    type: PropTypes.oneOf(["phone", "email", "alphabetic"]),
+    /**
+    Si está deshabilitado
+    */
+    disabled: PropTypes.bool,
+    /**
+    Autofocus al input
+    */
+    autoFocus: PropTypes.bool,
+    /**
+    Placeholder del input
+    */
+    placeholder: PropTypes.string,
+    /**
+    Etiqueta sobre el input
+    */
+    label: PropTypes.string
+};
+InputText.defaultProps = {
+    disabled: false,
+    autoFocus: false,
+    placeholder: "Placeholder",
+    label: "Etiqueta"
+};
+
+export { Avatar, InputSelect, InputText };

@@ -325,7 +325,7 @@ const getPath = (name:any, props:any) => {
           <rect
             width="17"
             height="17"
-            fill={UIVars.setColors.checkGreen}
+            fill="#28A745"
             rx="8.5"
           />
           <path
@@ -341,7 +341,7 @@ const getPath = (name:any, props:any) => {
           <rect
             width="17"
             height="17"
-            fill={UIVars.setColors.checkError}
+            fill="#C00"
             rx="8.5"
           />
           <g stroke="#FFF" strokeLinecap="square" strokeWidth="1.5">
@@ -395,6 +395,7 @@ type IconProps = {
   onClick: any
   viewBox: any
   testid?: any
+  fill: any
 };
 
 // @Component
@@ -410,12 +411,12 @@ const Icon = ( props: IconProps) => {
     height,
     onClick,
     viewBox,
-    testid
+    testid,
+    fill
   } = props
 
   const name = ''
   const style = {}
-  let fill = 'none'
   const stroke = ''
   const className = ''
   const width = 16
@@ -430,6 +431,7 @@ const Icon = ( props: IconProps) => {
       height={height}
       viewBox={getViewBox(viewBox, width, height)}
       className={className}
+      fill={fill}
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink">
       {getPath(name, { fill, stroke })}
