@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import variables from '../variables'
 
 const Wrapper = styled.div`
-  height: 97px;
+  height: 120px;
   select {
     width: -webkit-fill-available;
     height: 50px;
@@ -41,6 +41,9 @@ const Wrapper = styled.div`
     margin-top: 4px;
     align-items: center;
     font-size: 12px;
+    svg {
+      margin-right: 10px
+    }
   }
 
   .invalid_feedback {
@@ -49,6 +52,9 @@ const Wrapper = styled.div`
     margin-top: 4px;
     align-items: center;
     font-size: 12px;
+    svg {
+      margin-right: 10px
+    }
   }
 
   .borderGreen {

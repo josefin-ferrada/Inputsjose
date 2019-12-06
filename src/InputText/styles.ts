@@ -3,7 +3,7 @@ import variables from '../variables'
 
 const Wrapper = styled.div`
   font-family: 'Roboto', sans-serif;
-  height: 97px;
+  height: 120px;
   label {
     font-size: 14px;
     font-weight: bold;
@@ -16,6 +16,7 @@ const Wrapper = styled.div`
     }
     ::placeholder {
       font-style: normal;
+      font-size: 1rem;
       color: ${variables.setColors.brownGreyTwo}
     }
   }

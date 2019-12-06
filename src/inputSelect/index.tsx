@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { Wrapper } from "./styles";
 import { Input, Label } from "reactstrap";
-import { Icon } from "../UI/Icons";
 import classNames from "classnames";
 import PropTypes from "prop-types";
 import { PropSelect } from "./types";
+import { CircularError, CircularCheck } from "../UI/Icons";
 
 export const InputSelect = (props: PropSelect) => {
   const { disabled, label, placeholder, data } = props;
@@ -15,13 +15,13 @@ export const InputSelect = (props: PropSelect) => {
   let timer: any;
   const interval = 1000;
 
-  const validateSelect = (value: any) => {
-    if (value === "Selecciona") {
+  const validateSelect = (value: any, placeholder:string) => {
+    if (value === placeholder || value >= 240) {
       clearTimeout(timer);
       timer = setTimeout(() => {
         setIcon(
           <div className="invalid_feedback">
-            <Icon width={17} fill="#ffff" name="circularError" />
+            <CircularError/>
             Seleccione una opción válida
           </div>
         );
@@ -32,7 +32,7 @@ export const InputSelect = (props: PropSelect) => {
       timer = setTimeout(() => {
         setIcon(
           <div className="valid_feedback">
-            <Icon width={17} fill="#ffff" name="circularCheck" />
+            <CircularCheck/>
             Correcto
           </div>
         );
@@ -49,7 +49,7 @@ export const InputSelect = (props: PropSelect) => {
       </Label>
       <Input
         onChange={e => {
-          validateSelect(e.target.value);
+          validateSelect(e.target.value, placeholder);
         }}
         className={classNames({
           borderRed: borderInvalid,
@@ -64,14 +64,12 @@ export const InputSelect = (props: PropSelect) => {
         {data
           ? data.map((item: any, key: any) => {
               return (
-                <option value={item.item} key={key}>
-                  {item.item}
+                <option value={item.id} key={key}>
+                  {item.name}
                 </option>
               );
             })
-          : null}{<svg xmlns="http://www.w3.org/2000/svg" width="16" height="9" viewBox="0 0 16 9">
-          <path fill="#60798E" fill-rule="evenodd" d="M8.106 8.235a.934.934 0 0 1-.611-.227L.212 1.75 1.434.32l6.672 5.735L14.778.32 16 1.75 8.717 8.008a.934.934 0 0 1-.611.227z"/>
-      </svg>}
+          : null}
       </Input>
       {icon}
     </Wrapper>
@@ -101,6 +99,6 @@ InputSelect.propTypes = {
 InputSelect.defaultProps = {
   disabled: false,
   data: null,
-  placeholder: "Placeholder",
+  placeholder: "Selecciona",
   label: "Etiqueta"
 };

@@ -1,56 +1,20 @@
 import React, { useState } from "react";
 import { Wrapper } from "./styles";
 import { Input, Label } from "reactstrap";
-import { Icon } from "../UI/Icons";
+import { CircularError, CircularCheck } from "../UI/Icons";
 import classNames from "classnames";
 import PropTypes from "prop-types";
 import { InputProps } from "./types";
 
 export const InputText = (props: InputProps) => {
-  const { disabled, autoFocus, type, placeholder, label } = props;
-  const [valueInput, setValueInput] = useState("");
+  let { disabled, autoFocus, type, placeholder, label} = props;
+  const [valueInput, setValueInput] = useState('');
   const [icon, setIcon] = useState();
   const [borderValid, setBorderValid] = useState(false);
   const [borderInvalid, setBorderInvalid] = useState(false);
 
   let timer: any;
   const interval = 1000;
-
-  const ValidIcon = (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="17"
-      height="17"
-      version="1.1"
-      viewBox="0 0 17 17"
-    >
-      <g fillRule="nonzero">
-        <rect width="17" height="17" fill="#28A745" rx="8.5" />
-        <path
-          fill="#FFF"
-          fillRule="nonzero"
-          d="M7.125 10.531l5.385-5.385 1.097 1.097-6.364 6.364L3 8.364l.98-.98z"
-        />
-      </g>
-    </svg>
-  );
-
-  const InvalidIcon = (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="17"
-      height="17"
-      version="1.1"
-      viewBox="0 0 17 17"
-    >
-      <g {...props} fillRule="nonzero">
-        <rect width="17" height="17" fill="#C00" rx="8.5" />
-        <g stroke="#FFF" strokeLinecap="square" strokeWidth="1.5">
-          <path d="M5.474 5.555l6.24 5.941M5.34 11.544l6.035-6.153" />
-        </g>
-      </g>
-    </svg>
-  );
 
   const validateInput = (typeValidation: any, value: any) => {
     switch (typeValidation) {
@@ -83,7 +47,7 @@ export const InputText = (props: InputProps) => {
       timer = setTimeout(() => {
         setIcon(
           <div className="valid_feedback">
-            {ValidIcon}
+            <CircularCheck />
             Correcto
           </div>
         );
@@ -94,7 +58,7 @@ export const InputText = (props: InputProps) => {
       timer = setTimeout(() => {
         setIcon(
           <div className="invalid_feedback">
-            {InvalidIcon}
+            <CircularError />
             Este campo es obligatorio
           </div>
         );
@@ -105,7 +69,7 @@ export const InputText = (props: InputProps) => {
       timer = setTimeout(() => {
         setIcon(
           <div className="invalid_feedback">
-            {InvalidIcon}
+            <CircularError />
             {message}
           </div>
         );
@@ -116,7 +80,12 @@ export const InputText = (props: InputProps) => {
   };
 
   return (
-    <Wrapper>
+    <Wrapper
+      className={classNames({
+        invalid: borderInvalid,
+        valid: borderValid
+      })}
+    >
       <Label for="Input Text" className={classNames(disabled ? "gray" : "")}>
         {label}
       </Label>
