@@ -12,7 +12,7 @@ export type PropAvatar = {
   /** Id del usuario. */
   userId: number;
   /** Link de la imagen de usuario. */
-  picture: string;
+  picture?: string;
   /** Nombre completo de usuario. */
   fullName: string;
   /** Tamaño de la fuente en pixeles. */

@@ -441,7 +441,7 @@ var CircularCheck = function () { return (createElement("svg", { xmlns: "http://
         createElement("path", { fill: "#FFF", fillRule: "nonzero", d: "M7.125 10.531l5.385-5.385 1.097 1.097-6.364 6.364L3 8.364l.98-.98z" })))); };
 
 var InputSelect = function (props) {
-    var disabled = props.disabled, label = props.label, placeholder = props.placeholder, data = props.data;
+    var disabled = props.disabled, label = props.label, placeholder = props.placeholder, data = props.data, value = props.value;
     var _a = useState(), icon = _a[0], setIcon = _a[1];
     var _b = useState(false), borderValid = _b[0], setBorderValid = _b[1];
     var _c = useState(false), borderInvalid = _c[0], setBorderInvalid = _c[1];
@@ -468,6 +468,12 @@ var InputSelect = function (props) {
             }, interval);
         }
     };
+    var getValue = function (val) {
+        for (var i = 0; i < data.length; i++) {
+            var element = data[val].name;
+            return element;
+        }
+    };
     return (React__default.createElement(Wrapper$1, null,
         React__default.createElement(Label, { for: "exampleSelect", className: classNames(disabled ? "gray" : "") }, label),
         React__default.createElement(Input, { onChange: function (e) {
@@ -476,10 +482,11 @@ var InputSelect = function (props) {
                 borderRed: borderInvalid,
                 borderGreen: borderValid
             }), type: "select", name: "select", id: "exampleSelect", disabled: disabled || false },
-            React__default.createElement("option", { value: "Selecciona" }, placeholder),
+            React__default.createElement("option", { value: placeholder }, value ? getValue(value) : placeholder),
             data
                 ? data.map(function (item, key) {
-                    return (React__default.createElement("option", { value: item.id, key: key }, item.name));
+                    return (React__default.createElement(React__default.Fragment, null,
+                        React__default.createElement("option", { value: item.id, key: key }, item.name)));
                 })
                 : null),
         icon));

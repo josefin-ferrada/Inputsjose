@@ -7,7 +7,7 @@ import { PropSelect } from "./types";
 import { CircularError, CircularCheck } from "../UI/Icons";
 
 export const InputSelect = (props: PropSelect) => {
-  const { disabled, label, placeholder, data } = props;
+  const { disabled, label, placeholder, data, value } = props;
   const [icon, setIcon] = useState();
   const [borderValid, setBorderValid] = useState(false);
   const [borderInvalid, setBorderInvalid] = useState(false);
@@ -15,13 +15,13 @@ export const InputSelect = (props: PropSelect) => {
   let timer: any;
   const interval = 1000;
 
-  const validateSelect = (value: any, placeholder:string) => {
+  const validateSelect = (value: any, placeholder: string) => {
     if (value === placeholder || value >= 240) {
       clearTimeout(timer);
       timer = setTimeout(() => {
         setIcon(
           <div className="invalid_feedback">
-            <CircularError/>
+            <CircularError />
             Seleccione una opción válida
           </div>
         );
@@ -32,7 +32,7 @@ export const InputSelect = (props: PropSelect) => {
       timer = setTimeout(() => {
         setIcon(
           <div className="valid_feedback">
-            <CircularCheck/>
+            <CircularCheck />
             Correcto
           </div>
         );
@@ -41,6 +41,13 @@ export const InputSelect = (props: PropSelect) => {
       }, interval);
     }
   };
+
+  const getValue = (val:any) =>  {
+    for (let i = 0; i < data.length; i++) {
+      const element = data[val].name;
+      return element
+    }
+  }
 
   return (
     <Wrapper>
@@ -60,13 +67,14 @@ export const InputSelect = (props: PropSelect) => {
         id="exampleSelect"
         disabled={disabled || false}
       >
-        <option value="Selecciona">{placeholder}</option>
+        <option value={placeholder}>{value ? getValue(value): placeholder}</option>
         {data
           ? data.map((item: any, key: any) => {
-              return (
+              return (<>
                 <option value={item.id} key={key}>
                   {item.name}
                 </option>
+                </>
               );
             })
           : null}

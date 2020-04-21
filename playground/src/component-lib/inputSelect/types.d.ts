@@ -6,4 +6,6 @@ export declare type PropSelect = {
     label: boolean;
     placeholder: string;
     data: any;
+    value: any;
+    valid: any;
 };
